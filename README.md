@@ -1,4 +1,4 @@
-# SpringBootWithReact
+# Spring Boot Application With a React Front End
 
 For the front end, please check below:
 
