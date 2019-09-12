@@ -6,14 +6,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DemoLoader implements CommandLineRunner {
-
-    private final ContactRepository repository;
     @Autowired
-    public DemoLoader(ContactRepository repository){
-        this.repository = repository;
-    }
+    private ContactRepository repository;
+
+//    public DemoLoader(ContactRepository repository){
+//        this.repository = repository;
+//    }
     @Override
     public void run(String... strings) throws Exception {
-        this.repository.save(new Contact("Yunus", "JJ", "yunus@email.com"));
+        this.repository.save(new Contact("Yunus", "Surname", "yunus@email.com"));
+        this.repository.save(new Contact("Yunus", "Othersurname", "other@email.com"));
     }
 }
